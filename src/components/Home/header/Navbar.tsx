@@ -5,24 +5,27 @@ import { Pages, Routes } from '@/constants/enums'
 import Link from '../../link'
 import { Button, buttonVariants } from '../../ui/button'
 import { Menu, XIcon } from 'lucide-react';
+import { usePathname } from 'next/navigation';
 
-const Navbar = () => {
+const Navbar = ({ navLinks }: { navLinks: { [key: string]: string } }) => {
+    const pathname = usePathname()
     const [openMenu, setOpenMenu] = useState<boolean>(false)
+    const locale = pathname.split("/")[1]
 
     const links = [
-        { id: crypto.randomUUID(), title: "Menu", href: Routes.MENU },
-        { id: crypto.randomUUID(), title: "About", href: Routes.ABOUT },
-        { id: crypto.randomUUID(), title: "Contact", href: Routes.CONTACT },
-        { id: crypto.randomUUID(), title: "Login", href: `${Routes.AUTH}/${Pages.LOGIN}` }
+        { id: crypto.randomUUID(), title: navLinks.menu, href: Routes.MENU },
+        { id: crypto.randomUUID(), title: navLinks.about, href: Routes.ABOUT },
+        { id: crypto.randomUUID(), title: navLinks.contact, href: Routes.CONTACT },
+        { id: crypto.randomUUID(), title: navLinks.login, href: `${Routes.AUTH}/${Pages.LOGIN}` }
     ]
 
     return (
-        <nav >
-            <Button variant={"outline"} size={"icon"} className='lg:hidden' onClick={() => setOpenMenu(true)}>
+        <nav className='flex grow justify-end lg:block lg:justify-center lg:grow-0'>
+            <Button variant={"outline"} size={"icon"} className='lg:hidden me-2' onClick={() => setOpenMenu(true)}>
                 <Menu className='!w-6 !h-6' />
             </Button>
             <ul className={`
-        transition-all duration-300 backdrop-blur-sm bg-accent-foreground px-3 flex
+        transition-all duration-300 backdrop-blur-sm bg-accent px-3 flex
         fixed top-0 ${openMenu ? "left-0 z-[100]" : "-left-full"} w-full flex-col items-start py-5
         lg:static lg:w-fit lg:py-2 lg:rounded-full lg:flex-row lg:items-center gap-5
         `}>
@@ -32,12 +35,15 @@ const Navbar = () => {
                 {links.map((link) => (
                     <li key={link.id}>
                         <Link
-                            href={link.href}
+                            href={`/${locale}/${link.href}`}
+                            onNavigate={() => setOpenMenu(false)}
                             className={
                                 `${link.href === `${Routes.AUTH}/${Pages.LOGIN}`
                                     ? `${buttonVariants({ size: "lg" })} !rounded-full`
-                                    : "text-accent hover:text-primary"
-                                } px-3 py-2`
+                                    : "text-accent-foreground/50 hover:text-primary"
+                                } 
+                                ${pathname === `/${locale}/${link.href}` ? "text-primary" : ""}
+                                px-3 py-2`
                             }
                         >
                             {link.title}

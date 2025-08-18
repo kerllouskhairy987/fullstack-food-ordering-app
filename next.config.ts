@@ -6,9 +6,13 @@ const nextConfig: NextConfig = {
     remotePatterns: [
       {
         protocol: 'https',
-        hostname: 'encrypted-tbn0.gstatic.com',
+        hostname: '**',
       },
     ],
+  },
+  // For 404 route 
+  experimental: {
+    globalNotFound: true,
   },
 };
 

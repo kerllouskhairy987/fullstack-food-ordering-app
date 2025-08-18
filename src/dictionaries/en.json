@@ -1,0 +1,40 @@
+{
+    "logo": "pizza",
+    "home": {
+        "hero": {
+            "heroTitle": "Slice into Happiness",
+            "heroDes": "Caving Pizza? We have got you covered with fresh ingredients, endless flavors, and the fastest delivery. Your perfect slice is just a tap away!",
+            "buttons": {
+                "orderNow": "Order Now",
+                "learnMore": "Learn More"
+            }
+        },
+        "bestSellers": {
+            "subTitle": "check out",
+            "title": "our best sellers",
+            "noBestSellers": "No items found"
+        },
+        "about": {
+            "subTitle": "our story",
+            "title": "about us",
+            "descOne": "At our pizza restaurant, we serve freshly baked pizzas made with hand-crafted dough and the finest ingredients.",
+            "descTwo": "Our mission is to bring people together over delicious flavors, from classic Margherita to creative specialty pizzas.",
+            "descThree": "Whether you're a pizza enthusiast or simply looking for a quick snack, our restaurant has something for everyone."
+        },
+        "contact": {
+            "subTitle": "Don't Hesitate",
+            "title": "Contact Us",
+            "phone": "+201032910697"
+        }
+    },
+    "navLinks": {
+        "home": "Home",
+        "menu": "Menu",
+        "about": "About",
+        "contact": "Contact",
+        "login": "Login"
+    },
+    "footer": {
+        "copyRight": "Copyright © 2025"
+    }
+}

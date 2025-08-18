@@ -1,11 +1,12 @@
 import { formatCurrency } from '@/lib/formatter'
 import Image from 'next/image'
 import AddToCart from './AddToCart'
+import { ProductWithRelations } from '@/types/product'
 
-const MenuItems = ({ item }: { item: any }) => {
+const MenuItems = ({ item }: { item: ProductWithRelations }) => {
     return (
         <li className='border p-5 flex flex-col gap-4 rounded-md hover:bg-primary/10 hover:-translate-y-1'>
-            <div className='relative w-52 h-52 mx-auto'>
+            <div className='relative w-52 h-52 mx-auto rounded-full overflow-hidden'>
                 <Image src={item.image} alt={item.name} fill className='object-cover' />
             </div>
 

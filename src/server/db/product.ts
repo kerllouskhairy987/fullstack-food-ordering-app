@@ -1,0 +1,40 @@
+import { cache } from "@/lib/cache"
+import { db } from "@/lib/prisma"
+
+// --------------------------Get Cached Best Sellers--------------------------------
+export const getBestSellers = cache((limit?: number | undefined) => {
+    const bestSellers = db.product.findMany({
+        where: {
+            orders: {
+                some: {}
+            }
+        },
+        orderBy: {
+            orders: {
+                _count: "desc"  // تنازلي
+            }
+        },
+        include: {
+            sizes: true,
+            extras: true
+        },
+        take: limit,
+    })
+    return bestSellers
+}, ["best-sellers"], { revalidate: 3600 })
+
+
+// --------------------------Get Cached Product By Category--------------------------------
+export const getProductByCategory = cache(() => {
+    const products = db.category.findMany({
+        include: {
+            products: {
+                include: {
+                    sizes: true,
+                    extras: true,
+                }
+            }
+        }
+    })
+    return products
+}, ["products-by-category"], { revalidate: 3600 })

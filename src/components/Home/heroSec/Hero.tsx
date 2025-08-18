@@ -1,11 +1,16 @@
 import Image from 'next/image'
 import HeroCanvas from '../../ui/HeroCanvas'
 import Link from '../../link'
-import { Routes } from '@/constants/enums'
+import { Languages, Routes } from '@/constants/enums'
 import { buttonVariants } from '../../ui/button'
 import { ArrowRightCircle } from 'lucide-react'
+import { getCurrentLocale } from '@/lib/getCurrentLocale'
+import getTrans from '@/lib/translation'
 
-const Hero = () => {
+const Hero = async () => {
+    const locale = await getCurrentLocale();
+    const { home } = await getTrans(locale);
+    const { hero } = home;
     return (
         <section className=''>
             <div className="relative w-full h-[500px] overflow-hidden">
@@ -14,8 +19,8 @@ const Hero = () => {
                 </div>
                 <div className="container py-10 grid grid-cols-1 md:grid-cols-2 h-full justify-between gap-10">
                     <div className='flex flex-col gap-5 md:gap-10 justify-center'>
-                        <h1 className='font-bold text-3xl md:text-4xl whitespace-nowrap'>Slice into Happiness</h1>
-                        <p className='text-accent-foreground/50 text-lg'>Caving Pizza? We have got you covered with fresh ingredients, endless flavors, and the fastest delivery. Your perfect slice is just a tap away!</p>
+                        <h1 className='font-bold text-3xl md:text-4xl whitespace-nowrap'>{hero.heroTitle}</h1>
+                        <p className='text-accent-foreground/50 text-lg'>{hero.heroDes}</p>
 
                         <div className='flex gap-3'>
                             <Link
@@ -23,16 +28,16 @@ const Hero = () => {
                                 className={`${buttonVariants({ size: "lg" })}`}
 
                             >
-                                Order Now
-                                <ArrowRightCircle className='!w-5 !h-5' />
+                                {hero.buttons.orderNow}
+                                <ArrowRightCircle className={`!w-5 !h-5  ${locale === Languages.ARABIC ? "-rotate-180" : ""}`} />
                             </Link>
                             <Link
                                 href={Routes.ABOUT}
                                 className={`${buttonVariants({ variant: "ghost", size: "lg" })}`}
 
                             >
-                                Learn More
-                                <ArrowRightCircle className='!w-5 !h-5' />
+                                {hero.buttons.learnMore}
+                                <ArrowRightCircle className={`!w-5 !h-5  ${locale === Languages.ARABIC ? "-rotate-180" : ""}`} />
                             </Link>
                         </div>
                     </div>
