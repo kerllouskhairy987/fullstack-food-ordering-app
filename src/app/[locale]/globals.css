@@ -119,7 +119,7 @@
   }
 
   body {
-    @apply bg-background text-foreground min-h-screen flex flex-col;
+    @apply bg-background text-foreground min-h-screen flex flex-col overflow-x-hidden;
   }
 
   .container {

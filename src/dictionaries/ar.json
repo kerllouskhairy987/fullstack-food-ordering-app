@@ -34,6 +34,61 @@
         "contact": "اتصل بنا",
         "login": "تسجيل الدخول"
     },
+    "validation": {
+        "nameRequired": "الاسم مطلوب",
+        "validEmail": "يجب إدخال بريد إلكتروني صالح",
+        "validPassword": "يجب ان تحتوي كلمة المرور علي رموز خاصه و ارقام و احرف كبيره و صغيره",
+        "confirmPasswordRequired": "تأكيد كلمة المرور مطلوب",
+        "passwordMismatch": "كلمتا المرور غير متطابقتين"
+    },
+    "messages": {
+        "userNotFound": "المستخدم غير موجود",
+        "incorrectPassword": "كلمة المرور غير صحيحة",
+        "loginSuccessful": "تم تسجيل الدخول بنجاح",
+        "unexpectedError": "حدث خطأ غير متوقع",
+        "userAlreadyExists": "المستخدم موجود بالفعل",
+        "accountCreated": "تم إنشاء الحساب بنجاح",
+        "updateProfileSucess": "تم تحديث الملف الشخصي بنجاح",
+        "categoryAdded": "تمت إضافة الفئة بنجاح",
+        "updatecategorySucess": "تم تحديث الفئة بنجاح",
+        "deleteCategorySucess": "تم حذف الفئة بنجاح",
+        "productAdded": "تمت إضافة المنتج بنجاح",
+        "updateProductSucess": "تم تحديث المنتج بنجاح",
+        "deleteProductSucess": "تم حذف المنتج بنجاح",
+        "updateUserSucess": "تم تحديث المستخدم بنجاح",
+        "deleteUserSucess": "تم حذف المستخدم بنجاح"
+    },
+    "auth": {
+        "loading": "تحميل ...",
+        "login": {
+            "title": "مرحبا بك",
+            "submit": "تسجيل دخول",
+            "noHaveAccount": "هل ليس لديك حساب؟",
+            "noHaveAccountLink": "إنشاء حساب"
+        },
+        "register": {
+            "title": "إنشاء حساب",
+            "submit": "إنشاء حساب",
+            "haveAccount": "بالفعل لديك حساب؟",
+            "haveAccountLink": "تسجيل دخول"
+        },
+        "name": {
+            "label": "الاسم",
+            "placeholder": "ادخل اسمك"
+        },
+        "email": {
+            "label": "البريد الالكتروني",
+            "placeholder": "ادخل بريدك الالكتروني"
+        },
+        "password": {
+            "label": "الرقم السري",
+            "placeholder": "ادخل رقمك السري"
+        },
+        "confirmPassword": {
+            "label": "تاكيد الرقم السري",
+            "placeholder": "ادخل تاكيد رقمك السري"
+        }
+    },
     "footer": {
         "copyRight": "جميع الحقوق محفوظة © 2025"
     }

@@ -3,6 +3,7 @@
         "autoincrement",
         "cuid",
         "formatjs",
-        "localematcher"
+        "localematcher",
+        "NEXTAUTH"
     ]
 }

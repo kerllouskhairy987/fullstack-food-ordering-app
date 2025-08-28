@@ -1,12 +1,13 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Cairo, Geist, Geist_Mono } from "next/font/google";
 import { ThemeProvider } from "@/components/theme-provider"
-import "./globals.css";
 import Header from "@/components/Home/header/Index";
 import Footer from "@/components/ui/Footer";
 import { ReduxProvider } from "@/providers/ReduxProvider";
 import { Locale } from "@/i18n.config";
 import { Directions, Languages } from "@/constants/enums";
+import { Toaster } from "@/components/ui/sonner"
+import "./globals.css";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -19,6 +20,11 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
   preload: true,
 });
+
+const cairo = Cairo({
+  subsets: ["latin"],
+  preload: true,
+})
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -39,7 +45,7 @@ export default async function RootLayout({
       dir={locale === Languages.ARABIC ? Directions.RTL : Directions.LTR}
       suppressHydrationWarning>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={locale === Languages.ARABIC ? cairo.className : `${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         <ThemeProvider
           attribute="class"
@@ -52,6 +58,7 @@ export default async function RootLayout({
             <Header />
             {children}
             <Footer />
+            <Toaster />
           </ReduxProvider>
         </ThemeProvider>
       </body>

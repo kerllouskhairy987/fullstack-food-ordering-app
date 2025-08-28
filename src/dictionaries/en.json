@@ -34,6 +34,61 @@
         "contact": "Contact",
         "login": "Login"
     },
+    "validation": {
+        "nameRequired": "Name is required",
+        "validEmail": "Must be a valid email",
+        "validPassword": "Password must contain spacial characters, numbers, small and capital characters",
+        "confirmPasswordRequired": "Confirm Password is required",
+        "passwordMismatch": "Password do not match"
+    },
+    "messages": {
+        "userNotFound": "User not found",
+        "incorrectPassword": "Incorrect password",
+        "loginSuccessful": "Login successful",
+        "unexpectedError": "An unexpected error occurred",
+        "userAlreadyExists": "User already exists.",
+        "accountCreated": "Account created successfully",
+        "updateProfileSucess": "Profile updated successfull",
+        "categoryAdded": "Category added successfully",
+        "updatecategorySucess": "Category updated successfull",
+        "deleteCategorySucess": "Category deleted successfull",
+        "productAdded": "Product added successfully",
+        "updateProductSucess": "Product updated successfull",
+        "deleteProductSucess": "Product deleted successfull",
+        "updateUserSucess": "User updated successfull",
+        "deleteUserSucess": "User deleted successfull"
+    },
+    "auth": {
+        "loading": "Loading ...",
+        "login": {
+            "title": "Welcome Back",
+            "submit": "Login",
+            "noHaveAccount": "Don't have an account?",
+            "noHaveAccountLink": "Sign Up"
+        },
+        "register": {
+            "title": "Register",
+            "submit": "Register",
+            "haveAccount": "already have an account?",
+            "haveAccountLink": "Sign In"
+        },
+        "name": {
+            "label": "Username",
+            "placeholder": "Enter your username"
+        },
+        "email": {
+            "label": "Email",
+            "placeholder": "Enter your email"
+        },
+        "password": {
+            "label": "Password",
+            "placeholder": "Enter your password"
+        },
+        "confirmPassword": {
+            "label": "Confirm Password",
+            "placeholder": "Enter your confirm password"
+        }
+    },
     "footer": {
         "copyRight": "Copyright © 2025"
     }
