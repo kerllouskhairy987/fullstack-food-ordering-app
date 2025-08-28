@@ -11,11 +11,9 @@ import { usePathname } from "next/navigation";
 
 const AuthButtons = ({ translations, initialSession }: { translations: ITranslations, initialSession: Session | null }) => {
     const pathname = usePathname()
-    console.log(pathname)
     const locale = pathname.split("/")[1];
-    // const session = useSession();
     const session = useClientSession(initialSession)
-    console.log("Session", session)
+
     return (
         <div>
             {

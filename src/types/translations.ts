@@ -33,6 +33,8 @@ export interface ITranslations {
         about: string;
         contact: string;
         login: string;
+        profile: string;
+        admin: string;
     };
     validation: {
         nameRequired: string;

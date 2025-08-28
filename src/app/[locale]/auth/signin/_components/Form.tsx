@@ -13,7 +13,7 @@ import Loader from "@/components/ui/Loader";
 import { useParams, useRouter } from "next/navigation";
 
 const Form = ({ translation }: { translation: ITranslations }) => {
-
+    
     const formRef = useRef<HTMLFormElement>(null);
     const [error, setError] = useState({})
     const [loading, setLoading] = useState(false)
@@ -31,7 +31,6 @@ const Form = ({ translation }: { translation: ITranslations }) => {
         formData.forEach((value, key) => {
             data[key] = value.toString();
         });
-        console.log(data)
 
         try {
             setLoading(true);
@@ -47,7 +46,7 @@ const Form = ({ translation }: { translation: ITranslations }) => {
                 const responseError = JSON.parse(res?.error).responseError;
                 if (responseError) {
                     toast.error(responseError, {
-                        position: "top-center",
+                        position: "bottom-center",
                         className: "capitalize !text-destructive"
                     })
                 }

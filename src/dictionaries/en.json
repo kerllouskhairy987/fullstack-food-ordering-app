@@ -32,7 +32,9 @@
         "menu": "Menu",
         "about": "About",
         "contact": "Contact",
-        "login": "Login"
+        "login": "Login",
+        "profile": "Profile",
+        "admin": "Admin"
     },
     "validation": {
         "nameRequired": "Name is required",

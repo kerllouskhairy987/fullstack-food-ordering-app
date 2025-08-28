@@ -17,7 +17,7 @@ const SignupPage = async ({ params }: { params: Promise<{ locale: Locale }> }) =
                     <Form translation={translation} />
                     <div className="flex justify-center gap-2">
                         <p>{translation.auth.register.haveAccount}</p>
-                        <Link href={`/${locale}/${Routes.AUTH}/${Pages.LOGIN}`} className="text-primary">
+                    <Link href={`/${locale}/${Routes.AUTH}/${Pages.LOGIN}`} className="text-primary">
                             {translation.auth.register.haveAccountLink}
                         </Link>
                     </div>

@@ -1,7 +1,3 @@
-// install negotiator && @formatjs/intl-localematcher
-// make i18n.config.ts 
-// put your app in [locale] folder
-
 import type { NextRequest } from "next/server";
 import { NextResponse } from "next/server";
 import { match as matchLocale } from "@formatjs/intl-localematcher";
@@ -10,9 +6,7 @@ import { i18n, LanguageType, Locale } from "./i18n.config";
 import { withAuth } from "next-auth/middleware";
 import { getToken } from "next-auth/jwt";
 import { Pages, Routes } from "./constants/enums";
-// import { getToken } from "next-auth/jwt";
-// import { Pages, Routes } from "./constants/enums";
-// import { UserRole } from "@prisma/client";
+import { UserRole } from "../generated/prisma";
 
 function getLocale(request: NextRequest): string | undefined {
     const negotiatorHeaders: Record<string, string> = {};
@@ -71,24 +65,25 @@ export default withAuth(
         }
         // if user loggedIn and try to access auth routes
         if (isAuthPage && isAuth) {
-            // const role = isAuth.role;
-            // if (role === UserRole.ADMIN) {
-            //     return NextResponse.redirect(
-            //         new URL(`/${currentLocale}/${Routes.ADMIN}`, request.url)
-            //     );
-            // }
+            const role = isAuth.role;
+            if (role === UserRole.ADMIN) {
+                return NextResponse.redirect(
+                    new URL(`/${currentLocale}/${Routes.ADMIN}`, request.url)
+                );
+            }
             return NextResponse.redirect(
                 new URL(`/${currentLocale}/${Routes.PROFILE}`, request.url)
             );
         }
-        // // if user loggedin and he isn't admin and try to acess admin route
-        // if (isAuth && pathname.startsWith(`/${currentLocale}/${Routes.ADMIN}`)) {
-        //     const role = isAuth.role;
-        //     if (role !== UserRole.ADMIN) {
-        //         return NextResponse.redirect(
-        //             new URL(`/${currentLocale}/${Routes.PROFILE}`, request.url)
-        //         );
-        //     }
+        // if user loggedIn and he isn't admin and try to access admin route
+        if (isAuth && pathname.startsWith(`/${currentLocale}/${Routes.ADMIN}`)) {
+            const role = isAuth.role;
+            if (role !== UserRole.ADMIN) {
+                return NextResponse.redirect(
+                    new URL(`/${currentLocale}/${Routes.PROFILE}`, request.url)
+                );
+            }
+        }
         return response;
     }
     , {

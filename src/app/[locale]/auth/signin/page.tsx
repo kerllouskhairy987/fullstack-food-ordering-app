@@ -7,7 +7,6 @@ import getTrans from "@/lib/translation";
 const SigninPage = async () => {
     const locale = await getCurrentLocale();
     const translation = await getTrans(locale);
-    // const { auth } = translation;
 
     return (
         <main className="section-gap grow">

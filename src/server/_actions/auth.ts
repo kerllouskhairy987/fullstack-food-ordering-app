@@ -57,7 +57,6 @@ export const signup = async (prevState: unknown, formData: FormData) => {
     const result = signUpSchema(translations).safeParse(
         Object.fromEntries(formData.entries())
     );
-    console.log(result);
 
     // credentials are not correct
     if (result.success === false) {

@@ -9,8 +9,11 @@ import { usePathname } from 'next/navigation';
 import AuthButtons from './AuthButtons';
 import { ITranslations } from '@/types/translations';
 import { Session } from 'next-auth';
+import { useClientSession } from '@/hooks/useClientSession';
+import { UserRole } from '../../../../generated/prisma';
 
 const Navbar = ({ translations, initialSession }: { translations: ITranslations, initialSession: Session | null }) => {
+    const session = useClientSession(initialSession);
     const pathname = usePathname()
     const [openMenu, setOpenMenu] = useState<boolean>(false)
     const locale = pathname.split("/")[1]
@@ -20,6 +23,8 @@ const Navbar = ({ translations, initialSession }: { translations: ITranslations,
         { id: crypto.randomUUID(), title: translations.navLinks.about, href: Routes.ABOUT },
         { id: crypto.randomUUID(), title: translations.navLinks.contact, href: Routes.CONTACT },
     ]
+
+    const isAdmin = session.data?.user.role === UserRole.ADMIN;
 
     return (
         <nav className='flex grow justify-end lg:block lg:justify-center lg:grow-0'>
@@ -41,13 +46,39 @@ const Navbar = ({ translations, initialSession }: { translations: ITranslations,
                             onNavigate={() => setOpenMenu(false)}
                             className={`
                                 ${pathname === `/${locale}/${link.href}` ? "text-primary" : ""}
-                                text-accent-foreground/50 hover:text-primary py-2
+                                text-accent-foreground/50 hover:text-primary font-semibold py-2
                                 `}
                         >
                             {link.title}
                         </Link>
                     </li>
                 ))}
+
+                {session.data?.user && (
+                    <li>
+                        <Link
+                            href={
+                                isAdmin
+                                    ? `/${locale}/${Routes.ADMIN}`
+                                    : `/${locale}/${Routes.PROFILE}`
+                            }
+                            onClick={() => setOpenMenu(false)}
+                            className={`${pathname.startsWith(
+                                isAdmin
+                                    ? `/${locale}/${Routes.ADMIN}`
+                                    : `/${locale}/${Routes.PROFILE}`
+                            )
+                                ? "text-primary"
+                                : "text-accent-foreground/50"}
+                                } hover:text-primary duration-200 transition-colors font-semibold`}
+                        >
+                            {isAdmin
+                                ? translations.navLinks.admin
+                                : translations.navLinks.profile}
+                        </Link>
+                    </li>
+                )}
+
                 <li onClick={() => setOpenMenu(false)}>
                     <AuthButtons translations={translations} initialSession={initialSession} />
                 </li>

@@ -27,6 +27,7 @@ model User {
   country       String?
   createdAt     DateTime       @default(now())
   updatedAt     DateTime       @updatedAt
+  role          UserRole       @default(USER)
   orders        OrderProduct[]
   Account       Account[]
   Session       Session[]
@@ -151,4 +152,9 @@ enum ExtraIngredients {
   TOMATO
   ONION
   PEPPER
+}
+
+enum UserRole {
+  USER
+  ADMIN
 }
