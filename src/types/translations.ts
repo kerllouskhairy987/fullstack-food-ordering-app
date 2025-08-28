@@ -72,6 +72,9 @@ export interface ITranslations {
             haveAccount: string,
             haveAccountLink: string,
         },
+        logout: {
+            submit: string,
+        },
         name: {
             label: string,
             placeholder: string,

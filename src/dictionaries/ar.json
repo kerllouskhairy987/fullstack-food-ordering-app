@@ -72,6 +72,9 @@
             "haveAccount": "بالفعل لديك حساب؟",
             "haveAccountLink": "تسجيل دخول"
         },
+        "logout": {
+            "submit": "تسجيل خروج"
+        },
         "name": {
             "label": "الاسم",
             "placeholder": "ادخل اسمك"

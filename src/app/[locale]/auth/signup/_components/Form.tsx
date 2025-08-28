@@ -37,7 +37,7 @@ const Form = ({ translation }: { translation: ITranslations }) => {
     useEffect(() => {
         if (state.status && state.message) {
             toast(state.message, {
-                position: "top-center",
+                position: "bottom-center",
                 className: state.status === 201 ? "!text-primary" : "!text-destructive"
             })
         }

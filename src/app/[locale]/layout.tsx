@@ -8,6 +8,7 @@ import { Locale } from "@/i18n.config";
 import { Directions, Languages } from "@/constants/enums";
 import { Toaster } from "@/components/ui/sonner"
 import "./globals.css";
+import NextAuthSessionProvider from "@/providers/NextAuthSessionProvider";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -54,12 +55,16 @@ export default async function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
-          <ReduxProvider>
-            <Header />
-            {children}
-            <Footer />
-            <Toaster />
-          </ReduxProvider>
+          <NextAuthSessionProvider>
+
+            <ReduxProvider>
+              <Header />
+              {children}
+              <Footer />
+              <Toaster />
+            </ReduxProvider>
+
+          </NextAuthSessionProvider>
         </ThemeProvider>
       </body>
     </html>

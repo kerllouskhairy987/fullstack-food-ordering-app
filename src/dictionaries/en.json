@@ -72,6 +72,9 @@
             "haveAccount": "already have an account?",
             "haveAccountLink": "Sign In"
         },
+        "logout": {
+            "submit": "Logout"
+        },
         "name": {
             "label": "Username",
             "placeholder": "Enter your username"

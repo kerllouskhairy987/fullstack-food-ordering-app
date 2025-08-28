@@ -1,5 +1,4 @@
 import Link from '../../link'
-import { Routes } from '@/constants/enums'
 import Image from 'next/image'
 import Navbar from './Navbar'
 import { ModeToggle } from '../../ui/ModeToggle'
@@ -7,10 +6,12 @@ import CartButton from './CartButton'
 import { getCurrentLocale } from '@/lib/getCurrentLocale'
 import getTrans from '@/lib/translation'
 import LanguageSwitcher from './LanguageSwitcher'
+import { getServerSession } from 'next-auth'
 
 const Header = async () => {
     const locale = await getCurrentLocale();
-    const { logo, navLinks } = await getTrans(locale);
+    const translations = await getTrans(locale);
+    const initialSession = await getServerSession();
 
     return (
         <header className='sticky top-0 z-50 backdrop-blur-sm'>
@@ -22,10 +23,10 @@ const Header = async () => {
                         width={40}
                         height={10}
                     />
-                    {logo}
+                    {translations.logo}
                 </Link>
 
-                <Navbar navLinks={navLinks} />
+                <Navbar translations={translations} initialSession={initialSession} />
                 <div className='flex gap-2 items-center  justify-end'>
                     <LanguageSwitcher />
                     <ModeToggle />

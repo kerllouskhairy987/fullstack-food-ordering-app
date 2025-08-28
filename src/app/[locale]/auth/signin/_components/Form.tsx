@@ -55,7 +55,7 @@ const Form = ({ translation }: { translation: ITranslations }) => {
 
             if (res?.ok) {
                 toast.success(translation.messages.loginSuccessful, {
-                    position: "top-center",
+                    position: "bottom-center",
                     className: "capitalize"
                 })
                 // redirect to profile or admin dashboard
