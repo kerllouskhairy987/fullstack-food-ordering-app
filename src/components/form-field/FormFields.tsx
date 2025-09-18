@@ -22,7 +22,8 @@ const FormFields = (props: Props) => {
         }
 
         if (type === InputTypes.CHECKBOX) {
-            return <Checkbox checked={true} {...props} />;
+            // return <Checkbox checked={true} {...props} />;
+            return <Checkbox  {...props} />;
         }
 
         return <TextField {...props} />;

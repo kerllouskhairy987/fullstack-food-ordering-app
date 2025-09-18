@@ -38,3 +38,27 @@ export const getProductByCategory = cache(() => {
     })
     return products
 }, ["products-by-category"], { revalidate: 3600 })
+
+// ---------------------------Get Products --------------------------------------
+export const getProducts = cache(() => {
+    const products = db.product.findMany({
+        orderBy: {
+            order: "asc"
+        }
+    })
+    return products
+}, ["products"], { revalidate: 3600 })
+
+// ----------------------------Get Single Product------------------------
+export const getProduct = cache((id: string) => {
+    const product = db.product.findUnique({
+        where: {
+            id: id
+        },
+        include: {
+            sizes: true,
+            extras: true
+        }
+    })
+    return product
+}, [`product-${crypto.randomUUID()}`], { revalidate: 3600 })

@@ -12,6 +12,7 @@ export interface IFormField {
     | "number"
     | "date"
     | "time"
+    | "tel"
     | "datetime-local"
     | "checkbox"
     | "radio"

@@ -38,11 +38,24 @@ export interface ITranslations {
     };
     validation: {
         nameRequired: string;
+        descriptionRequired: string;
+        basePriceRequired: string;
+        categoryRequired: string;
+        imageRequired: string;
         validEmail: string;
         validPassword: string;
         confirmPasswordRequired: string;
         passwordMismatch: string;
+        inValidPhoneNumber: string;
+        inValidPostalCode: string;
     };
+    adminTabs: {
+        profile: string;
+        categories: string;
+        menuItems: string;
+        orders: string;
+        users: string;
+    },
     messages: {
         userNotFound: string;
         incorrectPassword: string;
@@ -59,7 +72,75 @@ export interface ITranslations {
         deleteProductSucess: string;
         updateUserSucess: string;
         deleteUserSucess: string;
+        noCategoriesFound: string;
     };
+    category: {
+        name: string
+        table: {
+            title: string
+            head: {
+                name: string
+                actions: string
+            }
+        }
+        total: string
+        edit: {
+            title: string
+            description: string
+            actions: {
+                update: string
+                cancel: string
+            }
+        },
+        delete: {
+            title: string
+            description: string
+            actions: {
+                delete: string
+                cancel: string
+            }
+        }
+    },
+    addProduct: {
+        title: string,
+        name: {
+            label: string
+            placeholder: string
+        },
+        description: {
+            label: string
+            placeholder: string
+        },
+        price: {
+            label: string
+            placeholder: string
+        },
+        sizes: {
+            name: string
+            actions: {
+                add: string
+            }
+        },
+        extras: {
+            name: string,
+            actions: {
+                add: string
+            }
+        },
+
+
+        actions: {
+            create: string;
+            cancel: string;
+            update: string;
+            delete: string;
+        }
+    },
+    createCategory: {
+        title: string;
+        placeholder: string;
+        submit: string;
+    },
     auth: {
         loading: string,
         login: {
@@ -92,6 +173,29 @@ export interface ITranslations {
         confirmPassword: {
             label: string,
             placeholder: string,
+        },
+        phone: {
+            label: string;
+            placeholder: string;
+        },
+        streetAddress: {
+            label: string;
+            placeholder: string;
+        },
+        postalCode: {
+            label: string;
+            placeholder: string;
+        },
+        city: {
+            label: string;
+            placeholder: string;
+        },
+        country: {
+            label: string;
+            placeholder: string;
+        },
+        profile: {
+            submitTxt: string
         }
     },
     footer: {

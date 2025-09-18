@@ -39,6 +39,8 @@ const AddToCart = ({ item }: { item: ProductWithRelations }) => {
         cart.find((cartItem) => cartItem.id === item.id)?.size ||  // اللي جاي من السله
         item.sizes.find((ele) => ele.name === ProductSizes.SMALL) // ال default اللي هو ال small
     const [selectedSize, setSelectedSize] = useState<Size>(defaultSize!);  // - ! to make sure its not null or undefined 
+    console.log('selected sizes', selectedSize)
+
 
     // Default Extras
     const defaultExtras = cart.find((cartItem) => cartItem.id === item.id)?.extras;  // اللي جاي من السله

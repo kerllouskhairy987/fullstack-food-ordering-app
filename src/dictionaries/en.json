@@ -38,10 +38,23 @@
     },
     "validation": {
         "nameRequired": "Name is required",
+        "descriptionRequired": "Description is required",
+        "basePriceRequired": "Base price is required",
+        "categoryRequired": "You must choose a category",
+        "imageRequired": "Image is required",
         "validEmail": "Must be a valid email",
         "validPassword": "Password must contain spacial characters, numbers, small and capital characters",
         "confirmPasswordRequired": "Confirm Password is required",
-        "passwordMismatch": "Password do not match"
+        "passwordMismatch": "Password do not match",
+        "inValidPhoneNumber": "Phone number must be a valid number",
+        "inValidPostalCode": "Postal code must be a valid number"
+    },
+    "adminTabs": {
+        "profile": "Profile",
+        "categories": "Categories",
+        "menuItems": "Menu Items",
+        "orders": "Orders",
+        "users": "Users"
     },
     "messages": {
         "userNotFound": "User not found",
@@ -58,7 +71,74 @@
         "updateProductSucess": "Product updated successfull",
         "deleteProductSucess": "Product deleted successfull",
         "updateUserSucess": "User updated successfull",
-        "deleteUserSucess": "User deleted successfull"
+        "deleteUserSucess": "User deleted successfull",
+        "noCategoriesFound": "No categories found"
+    },
+    "category": {
+        "name": "Category",
+        "table": {
+            "title": "A list of your recent categories.",
+            "head": {
+                "name": "Name",
+                "actions": "Actions"
+            }
+        },
+        "total":"Total Categories",
+        "edit": {
+            "title": "Edit Category",
+            "description": "Update your category name",
+            "actions": {
+                "update": "Update",
+                "cancel": "Cancel"
+            }
+        },
+        "delete": {
+            "title": "Are you absolutely sure?",
+            "description": " This action cannot be undone. This will permanently delete your category and remove your data from our servers.",
+            "actions": {
+                "delete": "Delete",
+                "cancel": "Cancel"
+            }
+        }
+    },
+    "addProduct": {
+        "title": "Add New Product",
+        "name": {
+            "label": "Item Name",
+            "placeholder": "Enter your item name"
+        },
+        "description": {
+            "label": "Item Description",
+            "placeholder": "Enter your item description"
+        },
+        "price": {
+            "label": "Base Price",
+            "placeholder": "Enter your base price"
+        },
+        "sizes": {
+            "name": "Sizes",
+            "actions": {
+                "add": "Add item size"
+            }
+        },
+        "extras": {
+            "name": "Extras Ingredients",
+            "actions": {
+                "add": "Add item extras"
+            }
+        },
+
+        "actions": {
+            "create": "Create",
+            "cancel": "Cancel",
+            "update": "Update",
+            "delete": "Delete"
+        }
+    },
+    "createCategory": {
+        "title": "Create Category",
+        "placeholder": "Enter Your Category Name",
+        "submit": "Create"
     },
     "auth": {
         "loading": "Loading ...",
@@ -92,6 +172,29 @@
         "confirmPassword": {
             "label": "Confirm Password",
             "placeholder": "Enter your confirm password"
+        },
+        "phone": {
+            "label": "Phone",
+            "placeholder": "Enter your phone number"
+        },
+        "streetAddress": {
+            "label": "Street Address",
+            "placeholder": "Enter your street address"
+        },
+        "postalCode": {
+            "label": "Postal Code",
+            "placeholder": "Enter your postal code"
+        },
+        "city": {
+            "label": "City",
+            "placeholder": "Enter your city"
+        },
+        "country": {
+            "label": "Country",
+            "placeholder": "Enter your country"
+        },
+        "profile": {
+            "submitTxt": "submit"
         }
     },
     "footer": {

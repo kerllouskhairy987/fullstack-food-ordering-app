@@ -38,10 +38,23 @@
     },
     "validation": {
         "nameRequired": "الاسم مطلوب",
+        "descriptionRequired": "الوصف مطلوب",
+        "basePriceRequired": "السعر الاساسي مطلوب",
+        "categoryRequired": "يجب اختيار فئة",
+        "imageRequired": "الصورة مطلوبة",
         "validEmail": "يجب إدخال بريد إلكتروني صالح",
         "validPassword": "يجب ان تحتوي كلمة المرور علي رموز خاصه و ارقام و احرف كبيره و صغيره",
         "confirmPasswordRequired": "تأكيد كلمة المرور مطلوب",
-        "passwordMismatch": "كلمتا المرور غير متطابقتين"
+        "passwordMismatch": "كلمتا المرور غير متطابقتين",
+        "inValidPhoneNumber": "رقم الهاتف غير صالح",
+        "inValidPostalCode": "الرقم البريدي غير صالح"
+    },
+    "adminTabs": {
+        "profile": "الملف الشخصي",
+        "categories": "الفئات",
+        "menuItems": "المنتجات",
+        "orders": "الطلبات",
+        "users": "المستخدمين"
     },
     "messages": {
         "userNotFound": "المستخدم غير موجود",
@@ -58,7 +71,74 @@
         "updateProductSucess": "تم تحديث المنتج بنجاح",
         "deleteProductSucess": "تم حذف المنتج بنجاح",
         "updateUserSucess": "تم تحديث المستخدم بنجاح",
-        "deleteUserSucess": "تم حذف المستخدم بنجاح"
+        "deleteUserSucess": "تم حذف المستخدم بنجاح",
+        "noCategoriesFound": "لا يوجد فئات"
+    },
+    "category": {
+        "name": "الفئة",
+        "table": {
+            "title": "قائمة الفئات الخاصة بك.",
+            "head": {
+                "name": "الاسم",
+                "actions": "العمليات"
+            }
+        },
+        "total": "اجمالي الفئات",
+        "edit": {
+            "title": "تحرير الفئة",
+            "description": "تحرير الاسم الخاص بالفئة",
+            "actions": {
+                "update": "تحديث",
+                "cancel": "الغاء"
+            }
+        },
+        "delete": {
+            "title": "هل انت متاكد؟",
+            "description": "هذا الاجراء لا يمكن التراجع عنه. سوف يتم حذف الفئة واحذف البيانات من الخادم.",
+            "actions": {
+                "delete": "حذف",
+                "cancel": "الغاء"
+            }
+        }
+    },
+    "addProduct": {
+        "title": "اضافة منتج جديد",
+        "name": {
+            "label": "اسم المنتج",
+            "placeholder": "ادخل اسم المنتج"
+        },
+        "description": {
+            "label": "وصف المنتج",
+            "placeholder": "ادخل وصف المنتج"
+        },
+        "price": {
+            "label": "سعر المنتج",
+            "placeholder": "ادخل سعر المنتج"
+        },
+        "sizes": {
+            "name": "الحجم",
+            "actions": {
+                "add": "اضافة حجم جديد"
+            }
+        },
+        "extras": {
+            "name": "الاضافات",
+            "actions": {
+                "add": "اضافة اضافة جديدة"
+            }
+        },
+
+        "actions": {
+            "create": "اضافة",
+            "cancel": "الغاء",
+            "update": "تحديث",
+            "delete": "حذف"
+        }
+    },
+    "createCategory": {
+        "title": "اضافة فئة",
+        "placeholder": "ادخل اسم الفئة",
+        "submit": "اضافة"
     },
     "auth": {
         "loading": "تحميل ...",
@@ -92,6 +172,29 @@
         "confirmPassword": {
             "label": "تاكيد الرقم السري",
             "placeholder": "ادخل تاكيد رقمك السري"
+        },
+        "phone": {
+            "label": "رقم الهاتف",
+            "placeholder": "ادخل رقم هاتفك"
+        },
+        "streetAddress": {
+            "label": "العنوان",
+            "placeholder": "ادخل عنوانك"
+        },
+        "postalCode": {
+            "label": "الرمز البريدي",
+            "placeholder": "ادخل رمزك البريدي"
+        },
+        "city": {
+            "label": "المدينة",
+            "placeholder": "ادخل مدينتك"
+        },
+        "country": {
+            "label": "البلد",
+            "placeholder": "ادخل بلدك"
+        },
+        "profile": {
+            "submitTxt": "تحديث"
         }
     },
     "footer": {

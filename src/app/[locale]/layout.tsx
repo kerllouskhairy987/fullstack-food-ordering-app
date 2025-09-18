@@ -10,6 +10,10 @@ import { Toaster } from "@/components/ui/sonner"
 import "./globals.css";
 import NextAuthSessionProvider from "@/providers/NextAuthSessionProvider";
 
+export async function generateStaticParams() {
+  return [{ locale: Languages.ARABIC }, { locale: Languages.ENGLISH }]
+}
+
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
@@ -23,7 +27,7 @@ const geistMono = Geist_Mono({
 });
 
 const cairo = Cairo({
-  subsets: ["latin"],
+  subsets: ["latin", "arabic"],
   preload: true,
 })
 
