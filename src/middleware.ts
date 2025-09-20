@@ -6,7 +6,7 @@ import { i18n, LanguageType, Locale } from "./i18n.config";
 import { withAuth } from "next-auth/middleware";
 import { getToken } from "next-auth/jwt";
 import { Pages, Routes } from "./constants/enums";
-import { UserRole } from "../generated/prisma";
+import { UserRole } from "@prisma/client";
 
 function getLocale(request: NextRequest): string | undefined {
     const negotiatorHeaders: Record<string, string> = {};
