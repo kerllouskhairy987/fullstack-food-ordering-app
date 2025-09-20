@@ -1,9 +1,6 @@
 "use client";
 
 import { createSlice, PayloadAction } from '@reduxjs/toolkit'
-import { Extra, Size } from '../../../../generated/prisma';
-import { RootState } from '@/redux/store';
-
 export type globalState = {
     userEmail: string
 }
