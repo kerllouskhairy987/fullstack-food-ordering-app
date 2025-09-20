@@ -4,7 +4,7 @@ import getTrans from "@/lib/translation";
 import { authOptions } from "@/server/auth";
 import { getServerSession } from "next-auth";
 import { redirect } from "next/navigation";
-import { UserRole } from "../../../../../../generated/prisma";
+import { UserRole } from "@prisma/client"
 import Form from "../_components/Form";
 import { getCategories } from "@/server/db/categories";
 

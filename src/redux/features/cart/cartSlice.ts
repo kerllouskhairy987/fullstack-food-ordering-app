@@ -1,7 +1,7 @@
 "use client";
 
 import { createSlice, PayloadAction } from '@reduxjs/toolkit'
-import { Extra, Size } from '../../../../generated/prisma';
+import { Extra, Size } from "@prisma/client"
 import { RootState } from '@/redux/store';
 
 export interface CartItem {

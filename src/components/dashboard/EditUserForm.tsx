@@ -5,7 +5,7 @@ import useFormFields from "@/hooks/useFormFields"
 import { ITranslations } from "@/types/translations"
 import FormFields from "../form-field/FormFields";
 import Image from "next/image";
-import { User, UserRole } from "../../../generated/prisma";
+import { User, UserRole } from "@prisma/client"
 import { IFormField } from "@/types/app";
 import { Button } from "../ui/button";
 import Checkbox from "../form-field/Checkbox";

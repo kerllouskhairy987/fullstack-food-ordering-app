@@ -6,7 +6,7 @@ import { db } from "@/lib/prisma";
 import getTrans from "@/lib/translation";
 import { addProductSchema, updateProductSchema } from "@/validations/product";
 import { revalidatePath } from "next/cache";
-import { Extra, ExtraIngredients, ProductSizes, Size } from "../../../../../../generated/prisma";
+import { Extra, ExtraIngredients, ProductSizes, Size } from "@prisma/client"
 
 export const addProduct = async (
     args: {

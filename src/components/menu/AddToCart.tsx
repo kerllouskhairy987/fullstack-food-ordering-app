@@ -19,7 +19,7 @@ import {
 import { Label } from '../ui/label';
 import { formatCurrency } from '@/lib/formatter';
 import { Checkbox } from '../ui/checkbox';
-import { Extra, ExtraIngredients, Product, ProductSizes, Size } from '../../../generated/prisma';
+import { Extra, ExtraIngredients, Product, ProductSizes, Size } from "@prisma/client"
 import { ProductWithRelations } from '@/types/product';
 import { useEffect, useState } from 'react';
 import { useAppDispatch, useAppSelector } from '@/redux/hooks';

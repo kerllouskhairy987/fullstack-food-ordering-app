@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button"
 import { ITranslations } from "@/types/translations"
-import { Extra, ExtraIngredients, ProductSizes, Size } from "../../../../../../generated/prisma"
+import { Extra, ExtraIngredients, ProductSizes, Size } from "@prisma/client"
 import { Plus, Trash } from "lucide-react"
 import { Label } from "@/components/ui/label"
 import { Input } from "@/components/ui/input"

@@ -1,5 +1,5 @@
 import { getServerSession } from "next-auth";
-import { UserRole } from "../../../../generated/prisma";
+import { UserRole } from "@prisma/client"
 import { redirect } from "next/navigation";
 import { Pages, Routes } from "@/constants/enums";
 import { Locale } from "@/i18n.config";

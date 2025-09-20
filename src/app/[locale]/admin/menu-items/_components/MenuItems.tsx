@@ -1,5 +1,5 @@
 import Link from "next/link"
-import { Product } from "../../../../../../generated/prisma"
+import { Product } from "@prisma/client"
 import { getCurrentLocale } from "@/lib/getCurrentLocale";
 import getTrans from "@/lib/translation";
 import Image from "next/image";

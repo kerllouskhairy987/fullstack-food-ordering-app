@@ -19,7 +19,7 @@ import { Edit } from "lucide-react"
 import { useParams } from "next/navigation";
 import { useActionState, useEffect, useState } from "react";
 import { updateCategory } from "../_actions/category";
-import { Category } from "../../../../../../generated/prisma";
+import { Category } from "@prisma/client"
 import Loader from "@/components/ui/Loader";
 import { validationErrors } from "@/validations/auth";
 import { toast } from "sonner";

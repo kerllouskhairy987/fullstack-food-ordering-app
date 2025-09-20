@@ -12,7 +12,7 @@ import { useActionState, useEffect, useState } from "react";
 import SelectCategory from "./SelectCategory";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion"
 
-import { Category, Extra, Size } from "../../../../../../generated/prisma";
+import { Category, Extra, Size } from "@prisma/client"
 import ItemOptions, { ItemOptionsKeys } from "./ItemOptions";
 import Link from "@/components/link";
 import { redirect, useParams } from "next/navigation";

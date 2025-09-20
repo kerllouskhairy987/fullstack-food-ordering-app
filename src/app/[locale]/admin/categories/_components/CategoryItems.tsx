@@ -3,7 +3,7 @@ import {
     TableCell,
     TableRow,
 } from "@/components/ui/table"
-import { Category } from '../../../../../../generated/prisma';
+import { Category } from "@prisma/client"
 import EditCategory from './EditCategory';
 import { ITranslations } from '@/types/translations';
 import DeleteCategory from './DeleteCategory';

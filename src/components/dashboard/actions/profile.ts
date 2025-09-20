@@ -6,7 +6,7 @@ import { db } from "@/lib/prisma";
 import getTrans from "@/lib/translation";
 import { updateProfileSchema } from "@/validations/profileValidation";
 import { revalidatePath } from "next/cache";
-import { UserRole } from "../../../../generated/prisma";
+import { UserRole } from "@prisma/client"
 
 export const updateProfile = async (isAdmin: boolean, prevState: unknown, formData: FormData) => {
     const locale = await getCurrentLocale();

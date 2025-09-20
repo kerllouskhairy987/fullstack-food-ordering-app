@@ -10,7 +10,7 @@ import {
     SelectValue,
 } from "@/components/ui/select"
 import { ITranslations } from "@/types/translations"
-import { Category } from "../../../../../../generated/prisma"
+import { Category } from "@prisma/client"
 import { Label } from "@/components/ui/label"
 
 type TProps = {

@@ -10,7 +10,7 @@ import AuthButtons from './AuthButtons';
 import { ITranslations } from '@/types/translations';
 import { Session } from 'next-auth';
 import { useClientSession } from '@/hooks/useClientSession';
-import { UserRole } from '../../../../generated/prisma';
+import { UserRole } from "@prisma/client";
 
 const Navbar = ({ translations, initialSession }: { translations: ITranslations, initialSession: Session | null }) => {
     const session = useClientSession(initialSession);
