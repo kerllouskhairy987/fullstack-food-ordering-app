@@ -30,12 +30,7 @@ function AdminTabs({ translations }: { translations: ITranslations }) {
       id: crypto.randomUUID(),
       title: translations.adminTabs.users,
       href: `${Routes.ADMIN}/${Pages.USERS}`,
-    },
-    {
-      id: crypto.randomUUID(),
-      title: translations.adminTabs.orders,
-      href: `${Routes.ADMIN}/${Pages.ORDERS}`,
-    },
+    }
   ];
   const isActiveTab = (href: string) => {
     const hrefArray = href.split("/");

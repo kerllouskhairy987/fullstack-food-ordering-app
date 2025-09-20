@@ -72,7 +72,8 @@
         "deleteProductSucess": "Product deleted successfull",
         "updateUserSucess": "User updated successfull",
         "deleteUserSucess": "User deleted successfull",
-        "noCategoriesFound": "No categories found"
+        "noCategoriesFound": "No categories found",
+        "productQuantityUpdated": "Product quantity updated successfully"
     },
     "category": {
         "name": "Category",

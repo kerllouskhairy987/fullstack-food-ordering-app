@@ -73,6 +73,7 @@ export interface ITranslations {
         updateUserSucess: string;
         deleteUserSucess: string;
         noCategoriesFound: string;
+        productQuantityUpdated: string
     };
     category: {
         name: string

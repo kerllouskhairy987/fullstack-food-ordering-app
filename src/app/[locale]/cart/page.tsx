@@ -1,10 +1,10 @@
-"use client";
-
 import CartItems from "@/components/cart/CartItems"
 import CheckoutForm from "@/components/cart/CheckoutForm"
 import Heading from "@/components/ui/Heading"
 
-const CartPage = () => {
+const CartPage = async () => {
+
+
     return (
         <main className="grow section-gap">
             <div className="container">

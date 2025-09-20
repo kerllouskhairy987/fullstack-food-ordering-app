@@ -72,7 +72,8 @@
         "deleteProductSucess": "تم حذف المنتج بنجاح",
         "updateUserSucess": "تم تحديث المستخدم بنجاح",
         "deleteUserSucess": "تم حذف المستخدم بنجاح",
-        "noCategoriesFound": "لا يوجد فئات"
+        "noCategoriesFound": "لا يوجد فئات",
+        "productQuantityUpdated": "تم تحديث كمية المنتج بنجاح"
     },
     "category": {
         "name": "الفئة",
