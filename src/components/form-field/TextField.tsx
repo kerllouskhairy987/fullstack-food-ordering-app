@@ -1,3 +1,4 @@
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
 import { IFormField } from "@/types/app";
 import { Input } from "../ui/input";
 import { Label } from "../ui/label";

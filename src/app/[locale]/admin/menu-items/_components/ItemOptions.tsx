@@ -1,3 +1,5 @@
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+
 import { Button } from "@/components/ui/button"
 import { ITranslations } from "@/types/translations"
 import { Extra, ExtraIngredients, ProductSizes, Size } from "@prisma/client"

@@ -1,3 +1,5 @@
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+
 import { IFormField } from "@/types/app";
 import { useState } from "react";
 import { Input } from "../ui/input";
