@@ -3,6 +3,7 @@ import { Pages, Routes } from "@/constants/enums";
 import { Locale } from "@/i18n.config";
 import getTrans from "@/lib/translation";
 import { getUser, getUsers } from "@/server/db/users"
+import { User } from "@prisma/client";
 import { redirect } from "next/navigation";
 
 export async function generateStaticParams() {
@@ -23,7 +24,7 @@ const EditUserPage = async ({ params }: { params: Promise<{ userId: string, loca
         <main className="grow">
             <div className="container mx-auto">
                 <div className="w-full backdrop-blur-sm bg-accent p-5 rounded-4xl flex flex-col gap-4 mb-5">
-                    <EditUserForm translation={translations} user={user} />
+                    <EditUserForm translation={translations} user={user as User} />
                 </div>
             </div>
         </main>
