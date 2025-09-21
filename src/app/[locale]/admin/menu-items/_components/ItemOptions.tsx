@@ -1,4 +1,4 @@
-// eslint-disable-next-line @typescript-eslint/no-explicit-any
+"use client";
 
 import { Button } from "@/components/ui/button"
 import { ITranslations } from "@/types/translations"
@@ -43,7 +43,7 @@ function handleOptions(
 
     // Handle Change Item From Select
     const onChange = (
-        e: React.ChangeEvent<HTMLSelectElement>,
+        e: React.ChangeEvent<HTMLSelectElement> | React.ChangeEvent<HTMLInputElement>,
         index: number,
         fieldName: string
     ) => {
@@ -58,7 +58,7 @@ function handleOptions(
     // Handle Remove Option
     const removeOption = (indexToRemove: number) => {
         setState((prev: any) => {
-            return prev.filter((_: any, index: number) => index !== indexToRemove)
+            return prev.filter((_: unknown, index: number) => index !== indexToRemove)
         })
     }
 
@@ -90,6 +90,8 @@ const ItemOptions = (
         }
     }
 
+    console.log('STATE', state)
+
     return (
         <>
             {
@@ -111,7 +113,7 @@ const ItemOptions = (
                             <Input
                                 name="price" type="number" placeholder="0"
                                 value={option.price ? option.price : 0}
-                                onChange={(e) => onChange(e as any, index, "price")}
+                                onChange={(e) => onChange(e, index, "price")}
                                 min={0} />
                         </div>
 
