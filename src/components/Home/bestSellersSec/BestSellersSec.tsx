@@ -3,6 +3,7 @@ import Heading from '@/components/ui/Heading'
 import { getCurrentLocale } from '@/lib/getCurrentLocale';
 import getTrans from '@/lib/translation';
 import { getBestSellers } from '@/server/db/product'
+import { ProductWithRelations } from '@/types/product';
 
 const BestSellersSec = async () => {
 
@@ -20,7 +21,7 @@ const BestSellersSec = async () => {
                 </div>
 
                 <div className='section-gap'>
-                    <Menu items={bestSellers} />
+                    <Menu items={bestSellers as ProductWithRelations[]} />
                 </div>
             </div>
         </section>
