@@ -1,7 +1,6 @@
 import { IFormField } from "@/types/app";
 import { Label } from "../ui/label";
 import { Checkbox as ShadCnCheckbox } from "../ui/checkbox";
-import { validationErrors } from "@/validations/auth";
 
 interface Props  {
     onClick?: () => void

@@ -36,7 +36,7 @@ function handleOptions(
 ) {
     // Add Options
     const addOptions = () => {
-        setState((prev: any) => {
+        setState((prev) => {
             return [...prev, { name: "", price: 0 }]
         })
     }
@@ -48,7 +48,7 @@ function handleOptions(
         fieldName: string
     ) => {
         const newValue = e.target.value;
-        setState((prev: any) => {
+        setState((prev) => {
             const newSizes = [...prev];
             newSizes[index][fieldName] = newValue;
             return newSizes;
@@ -57,7 +57,7 @@ function handleOptions(
 
     // Handle Remove Option
     const removeOption = (indexToRemove: number) => {
-        setState((prev: any) => {
+        setState((prev) => {
             return prev.filter((_: unknown, index: number) => index !== indexToRemove)
         })
     }
