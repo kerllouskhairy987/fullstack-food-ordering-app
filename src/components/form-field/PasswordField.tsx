@@ -1,4 +1,3 @@
-// eslint-disable-next-line @typescript-eslint/no-explicit-any
 
 import { IFormField } from "@/types/app";
 import { useState } from "react";
@@ -7,10 +6,10 @@ import { Label } from "../ui/label";
 import { EyeIcon, EyeOffIcon } from "lucide-react";
 import { useParams } from "next/navigation";
 import { Languages } from "@/constants/enums";
-// import { ValidationErrors } from "@/validations/auth";
+import { validationErrors } from "@/validations/auth";
 
 interface Props extends IFormField {
-    error: any;
+    error: validationErrors;
 }
 interface IState {
     showPassword: boolean;

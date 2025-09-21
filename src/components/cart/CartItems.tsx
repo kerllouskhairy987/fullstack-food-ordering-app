@@ -78,7 +78,7 @@ const CartItems = () => {
                                     <div className="flex-1 flex items-end justify-end">
                                         <div className="flex items-center gap-3">
                                             <strong className="text-accent-foreground/50 ">
-                                                {formatCurrency(item.basePrice + (item.size?.price! || 0))}
+                                                {item.size && formatCurrency(item.basePrice + (item.size.price! || 0))}
                                             </strong>
                                             <Button
                                                 onClick={() => {

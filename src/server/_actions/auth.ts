@@ -45,6 +45,7 @@ export const login = async (credentials: Record<"email" | "password", string> | 
         }
 
         const { password, ...userWithoutPassword } = user;
+        console.log(password)
         return { user: userWithoutPassword, message: translations.messages.loginSuccessful, status: 200 }
 
     } catch (error) {

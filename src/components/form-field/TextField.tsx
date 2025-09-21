@@ -1,11 +1,10 @@
-// eslint-disable-next-line @typescript-eslint/no-explicit-any
 import { IFormField } from "@/types/app";
 import { Input } from "../ui/input";
 import { Label } from "../ui/label";
-// import { ValidationErrors } from "@/validations/auth";
+import { validationErrors } from "@/validations/auth";
 
 interface Props extends IFormField {
-    error: any;
+    error: validationErrors;
 }
 
 const TextField = ({
